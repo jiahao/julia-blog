@@ -1,7 +1,6 @@
 IJULIA_NOTEBOOK_PATH=/Users/jiahao/IJuliaNotebooks/public
+NOTEBOOK_FILES=$(wildcard $(IJULIA_NOTEBOOK_PATH)/*.ipynb)
 
-all: 2014-06-09-the-colors-of-chemistry.html
+all: $(NOTEBOOK_FILES)
+	ipython nbconvert --profile julia $<
 
-2014-06-09-the-colors-of-chemistry.html: $(IJULIA_NOTEBOOK_PATH)/Colors\ of\ chemistry.ipynb
-	ipython nbconvert $(IJULIA_NOTEBOOK_PATH)/Colors\ of\ chemistry.ipynb
-	mv Colors\ of\ chemistry.html 2014-06-09-the-colors-of-chemistry.html
