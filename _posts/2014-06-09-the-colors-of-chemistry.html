@@ -3671,7 +3671,7 @@ return module;
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="computing-white">Computing white</h3>
 <p>As a sanity check, I wanted to make sure that projecting a flat power spectrum into the XYZ space produced a white color. This is white in the purely technical sense, of having the same intensity of light at every wavelength.</p>
-<p>To do this, we&#39;ll have to imbue the XYZ color space with vector space operations. Specifially, it follows by the definition of the XYZ color space that the usual notions of vector addition and scaling apply. These operations are not currently in <code>Color.jl</code>, but Julia makes it very easy to extend:</p>
+<p>To do this, we&#39;ll have to imbue the XYZ color space with vector space operations; in particular, we want to add and scale vectors. It follows by the definition of the XYZ color space that the usual notions of these operations apply (the color space has no curvature). These operations are not currently in <code>Color.jl</code>, but Julia makes it very easy to extend:</p>
 </div>
 </div>
 </div>
